@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col" >Name</th>
+            <th scope="col" >Capital</th>
+            <th scope="col" >Flag</th>
+            <th scope="col" >Currencies</th>
+            <th scope="col" >Population</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" >{{tableContent.name}}</th>
+            <td>{{tableContent.capital}}</td>
+            <td> <img [src]="tableContent.flag" class="mr-2" style="width: 20px"></td>
+            <td *ngFor="let currencie of tableContent.currencies">{{currencie.name}}</td>
+            <td>{{tableContent.population}}</td>
+        </tr>    
+    </tbody>
+</table>    

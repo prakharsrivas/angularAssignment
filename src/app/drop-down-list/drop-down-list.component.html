@@ -1,0 +1,5 @@
+<select (change)="onChangeAction($event)" class="form-select form-select-sm" aria-label="drop down">
+    <option selected>Please Select</option>
+    <option *ngFor="let region of listOfOtions; index as i" value={{i}} >{{region.name}}</option>
+</select>
+

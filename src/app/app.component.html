@@ -1,0 +1,37 @@
+<div class="container px-4">
+  <div class="row gx-5">
+    <div class="col">
+     <div class="p-3 border bg-light">
+      <h5>List Of Region</h5>
+      <drop-down-list (selectedOptions)="enableCountriesList($event)" [listOfOtions] = listOfRegion >Loading ...</drop-down-list>
+      <br>
+      <div *ngIf="basedOnCountrieSelection">
+        <h5>List Of Countrie</h5>
+        <drop-down-list (selectedOptions)="displayCountrieTable($event)" [listOfOtions] = listOfCountrie >Loading ...</drop-down-list>
+      </div> 
+      <br>
+      <div *ngIf="countrieDetails">
+        <h5>About Countrie</h5>
+        <display-table [tableContent]= tableContent >Loading...</display-table>
+      </div>
+     </div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light">
+        <h5>Assignment Details</h5>
+        <li>Create a drop down that contains the “Region” options Europe and Asia (loaded from store). </li>
+        <li>On selecting a region, a second drop down should be enabled and populated with “Countries” based on the API response from above URLs. </li>
+        <div *ngIf="basedOnCountrieSelection">
+        <li>On selecting the “Country” display a simple table that contains the </li>
+          <ul>
+            <li>a) Name</li>
+            <li>b) Capital</li>
+            <li>c) Population</li>
+            <li>d) Currencies</li>
+            <li>e) Flag</li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
